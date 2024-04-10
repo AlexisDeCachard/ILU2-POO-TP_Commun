@@ -13,7 +13,7 @@ public class ReservationHotel extends Reservation {
 	}
 	
 	public String toString() {
-		return super.toString() + " Chambre " + numChambre + " avec " + nbLitsSimples + " lits simples et " + nbLitsDoubles + " lits doubles";
+		return super.toString() + "Chambre " + numChambre + " avec " + nbLitsSimples + " lit(s) simple(s) et " + nbLitsDoubles + " lit(s) double(s).";
 	}
 
 }

@@ -11,6 +11,6 @@ public class ReservationSpectacle extends Reservation {
 	}
 	
 	public String toString() {
-		return super.toString() + " Chaise n°" + numChaise + " dans la zone n°" + numZone;
+		return super.toString() + "Chaise " + numChaise + " dans la zone n°" + numZone + ".";
 	}
 }
