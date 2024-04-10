@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 class CalendrierAnnuelTest {
 	static CalendrierAnnuel calendrier;
@@ -21,6 +22,12 @@ class CalendrierAnnuelTest {
 	@Test
 	void testEstLibre() {
 		assertTrue(calendrier.estLibre(31,12), "31/12 devrait être libre");
+		calendrier.reserver(31, 12);
+		assertFalse(calendrier.estLibre(31,12), "31/12 devrait être réservé");
+		assertThrows(IllegalStateException.class, () -> calendrier.reserver(33, 12));
+		assertThrows(IllegalStateException.class, () -> calendrier.reserver(0, 12));
+		assertThrows(IllegalStateException.class, () -> calendrier.reserver(31, 13));
+		assertThrows(IllegalStateException.class, () -> calendrier.reserver(31, 0));
 	}
 
 	@Test
