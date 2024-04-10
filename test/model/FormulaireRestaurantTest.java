@@ -26,8 +26,7 @@ class FormulaireRestaurantTest {
 
 	@Test
 	void testGetNombrePersonnes() {
-		assertEquals(NB_PERSONNES, formulaire.getNombrePersonnes(),
-				"Le nombre de personnes devrait être " + NB_PERSONNES);
+		assertEquals(NB_PERSONNES, formulaire.getNombrePersonnes(),"Le nombre de personnes devrait être " + NB_PERSONNES);
 	}
 
 	@Test
